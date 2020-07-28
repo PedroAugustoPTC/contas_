@@ -1,0 +1,12 @@
+{
+  "name": "contas",
+  "displayName": "contas",
+  "expo": {
+    "name": "contas",
+    "slug": "contas",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
