@@ -70,10 +70,10 @@ export default class Cadastro extends Component {
 	
 	formatarValor(value) {
 		const valor = value[value.length - 1];
-	
+
 		if ((valor >= 0 && valor <= 9) || valor == ".")
 			return value;
-	
+
 		else return value.split(value[value.length - 1], 1);
 	}
 	render() {
