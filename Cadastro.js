@@ -68,14 +68,6 @@ export default class Cadastro extends Component {
 		
 	}
 	
-	formatarValor(value) {
-		const valor = value[value.length - 1];
-
-		if ((valor >= 0 && valor <= 9) || valor == ".")
-			return value;
-
-		else return value.split(value[value.length - 1], 1);
-	}
 	render() {
 		return (
 			<SafeAreaView style={styles.container}>
@@ -91,7 +83,8 @@ export default class Cadastro extends Component {
 					<TextInput style={styles.input} placeholder="Nova Conta" value={this.state.conta} 
 						onChangeText={ (conta) => this.setState({conta: conta}) } />
 					<TextInput style={styles.input} placeholder="Valor" value={this.state.valor} 
-						onChangeText={ (valor) => this.setState({valor: this.formatarValor(valor)}) }	
+						onChangeText={ (valor) => this.setState({valor: valor}) }
+						keyboardType={'numeric'}
 					/>
 					<Button style={styles.botao} title="+" onPress={() => this.adicionarConta()} />
 				</View>

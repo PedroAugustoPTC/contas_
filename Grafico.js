@@ -16,9 +16,9 @@ export default class Grafico extends Component {
 
             contas.forEach((conta) =>{
 				contas1[contas1.length] = conta.val().conta;
-                valores[valores.length] = conta.val().valor;
+                valores[valores.length] = parseFloat(conta.val().valor);
             });
-        });
+		});
         var data = {
                 labels: contas1,
                 datasets: [
